@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather.css">
+</head>
+<body class="season-spring">
+  <div class="backdrop"></div>
+  <main class="app-shell">
+    <div class="title">
+      <h1>Weather by Place</h1>
+      <p>Type a city, town, or village to see current weather.</p>
+    </div>
+
+    <section class="panel">
+      <form id="weather-form" novalidate>
+        <div class="search-row">
+          <div>
+            <label for="location-input">Place name</label>
+            <input id="location-input" type="text" name="location" placeholder="e.g. London, Tokyo, Cape Town" autocomplete="off" required>
+          </div>
+          <div>
+            <label>&nbsp;</label>
+            <button type="submit">Get Weather</button>
+          </div>
+        </div>
+      </form>
+      <div id="status" class="status"></div>
+
+      <div id="weather-card" class="weather-card hidden">
+        <div class="place-row">
+          <div>
+            <div id="place" class="place">---</div>
+            <div id="meta" class="meta"></div>
+          </div>
+          <div id="season-chip" class="season-chip"><span class="season-dot"></span>Season</div>
+        </div>
+
+        <div class="data-grid">
+          <div class="data-tile">
+            <div class="data-label">Temperature</div>
+            <div id="temp" class="data-value">--°C</div>
+          </div>
+          <div class="data-tile">
+            <div class="data-label">Condition</div>
+            <div id="condition" class="data-value">--</div>
+          </div>
+          <div class="data-tile">
+            <div class="data-label">Wind</div>
+            <div id="wind" class="data-value">--</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="weather.js"></script>
+</body>
+</html>
+
